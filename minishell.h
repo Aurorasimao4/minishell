@@ -6,7 +6,7 @@
 /*   By: asimao <asimao@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 09:40:42 by asimao            #+#    #+#             */
-/*   Updated: 2024/11/08 13:08:00 by asimao           ###   ########.fr       */
+/*   Updated: 2024/11/10 16:28:39 by asimao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,8 @@ void    str_error_syntax();
 void    error_redir(char *filename);
 void	error_cd(char *filename);
 void    error_redir(char *filename);
+void ft_echo(char **args);
+void    ft_pwd();
+int cd_exec(char **args, char **envp);
 
 #endif

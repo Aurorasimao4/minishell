@@ -6,16 +6,16 @@
 /*   By: asimao <asimao@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 08:57:13 by asimao            #+#    #+#             */
-/*   Updated: 2024/11/08 13:10:28 by asimao           ###   ########.fr       */
+/*   Updated: 2024/11/10 16:38:51 by asimao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-
-int main()
-{
-    term_init();
-    str_error_syntax();
-    return (0);
+int main(int argc, char *argv[], char **envp) {
+    if (argc == 0)
+        return(0);
+    term_init(envp);
+    ft_echo(argv);
+    return 0;
 }

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: asimao <marvin@42.fr>                      +#+  +:+       +#+         #
+#    By: asimao <asimao@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/19 17:15:39 by asimao            #+#    #+#              #
-#    Updated: 2024/05/19 17:15:50 by asimao           ###   ########.fr        #
+#    Updated: 2024/11/10 17:51:46 by asimao           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,11 +29,10 @@ NAME = libft.a
 
 all:	$(NAME)
 
-%.o: %.c
-	$(CC) $(CFLAGS) -I . -c $< -o $@
-
 $(NAME):	$(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	@ar rcs $(NAME) $(OBJS)
+%.o: %.c
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 bonus:	$(BONUS_OBJS)
 	ar rcs $(NAME) $(BONUS_OBJS)
